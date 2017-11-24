@@ -1,0 +1,17 @@
+<!--page/balance/balance.wxml-->
+<view class="score">
+  <view class="num">¥ {{balance}}</view>
+  <view bindtap='goBalDetail' class="fontstyle">♪查看余额明细</view>
+</view>
+<view class="curAccount">当前账户:{{account}}</view>
+<view class="section">
+    <view class="rechargeAmt">充值金额:</view>
+    <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;">
+        <view wx:for="{{amount}}" class="flex-item {{index == currentType ? 'active' : ''}}" bindtap="money1"  style="border-color:{{pageBorderColor}};color:{{pageColor}}" data-index="{{index}}">
+          <view class="{{index == currentType ? 'active' : ''}}" style="line-height:60px">{{item}}元</view>
+        </view>
+    </view>
+    <input bindinput="bindKeyInput" placeholder='请输入充值金额,最低1元' placeholder-style="font-size: 15px;color: #C7C7C7;" type="number" class='input' value="{{chargeAmt}}"></input>
+    <button wx:if="{{inputMoney == null || inputMoney < 1}}" class="button" type="primary" disabled="true">立即支付</button>
+    <button wx:if="{{inputMoney >=1}}" class="button" type="primary" hover-class="button-hover" bindtap="toPay" data-amt="{{inputMoney}}">立即支付</button>
+</view>

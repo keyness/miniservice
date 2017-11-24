@@ -1,0 +1,17 @@
+/* page/baldetail/baldetail.wxss */
+.score{
+  background-color: #98FB98;
+  height: 150px;
+}
+.fontstyle{
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0;
+}
+.num{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  line-height: 100px;
+}

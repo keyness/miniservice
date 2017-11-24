@@ -1,0 +1,25 @@
+<import src="../common/head.wxml" />
+
+<!--page/index/index.wxml-->
+
+<view class="page-section-spacing">
+  <image class="card" bindtap="bindUser" src="../tem/2.jpg">
+    <view class="cardtitle">普通会员</view>
+    <view class="cardmsg">再获取xxx点升级为银卡会员</view>
+    <progress percent="20" activeColor="orange" backgroundColor="lightgreen" stroke-width="9"/>
+  </image>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view bindtap="goScore">
+      <view class="flex-item" style="color:lightgreen;font-size:40rpx">0分</view>
+      <view class="flex-item" >积分></view>
+    </view>
+    <view bindtap="goBalance">
+      <view class="flex-item" style="color:lightgreen;font-size:40rpx">0元</view>
+      <view class="flex-item" >余额·充值></view>
+    </view>
+    <view bindtap="goCoupon">
+      <view class="flex-item c" style="color:lightgreen;font-size:40rpx">x张</view>
+      <view class="flex-item c" >优惠券></view>
+    </view>
+  </view>
+</view>

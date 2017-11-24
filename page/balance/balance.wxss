@@ -1,0 +1,58 @@
+/* page/balance/balance.wxss */
+.score{
+  background-color: #98FB98;
+  height: 150px;
+}
+.fontstyle{
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 0;
+}
+.num{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  line-height: 100px;
+}
+.curAccount{
+  color: lightgrey;
+  padding: 5px;
+  font-size: 13px;
+}
+.flex-item{
+  width: 90px;
+  height: 60px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+}
+.flex-wrp{
+    height: 100px;
+    display:flex;
+    background-color: #FFFFFF;
+}
+.active{
+  border-color: lightgreen;
+  color: lightgreen;
+}
+.rechargeAmt{
+  color: lightgrey;
+  padding: 5px;
+  font-size: 20px;
+}
+.input{
+  background-color: #F8F8FF;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5%;
+  padding-left: 20px;
+  color: #C7C7C7;
+}
+.button{
+  margin: 10px;
+  margin-top: 20px;
+}

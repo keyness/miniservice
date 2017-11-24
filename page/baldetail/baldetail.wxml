@@ -1,0 +1,6 @@
+<!--page/baldetail/baldetail.wxml-->
+<!--page/balance/balance.wxml-->
+<view class="score">
+  <view class="num">¥ 0</view>
+  <view class="fontstyle">♪当前余额</view>
+</view>
