@@ -5,7 +5,8 @@
     "page/user/user",
     "page/balance/balance",
     "page/baldetail/baldetail",
-    "page/coupon/coupon"
+    "page/coupon/coupon",
+    "page/modifyinfo/modifyinfo"
   ],
   "window": {
     "navigationBarTextStyle": "black",

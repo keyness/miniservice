@@ -1,2 +1,31 @@
-<!--page/user/user.wxml-->
-<text>page/user/user.wxml</text>
+<view class='container'>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">会员账号: </view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">姓名: </view>
+    <view class="flex-item modi" bindtap="modifyinfo">修改></view>
+  </view>
+    <view class="info">性别: </view>
+    <view class="info">出生日期: </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">会员等级: </view>
+    <view class="flex-item modi" bindtap="myvip">我的特权></view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">活跃值: </view>
+    <view class="flex-item modi" bindtap="activate">查看></view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">账户余额: </view>
+    <view class="flex-item modi" bindtap="tocharge">充值></view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">优惠券: </view>
+    <view class="flex-item modi" bindtap="tocoupon">查看></view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="info">积分: </view>
+    <view class="flex-item modi" bindtap="toscore">查看></view>
+  </view>
+</view>

@@ -1,11 +1,11 @@
-// page/user/user.js
+// page/modifyinfo/modifyinfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    sex: 0,
   },
 
   /**
@@ -63,24 +63,17 @@ Page({
   onShareAppMessage: function () {
   
   },
-  modifyinfo: function(){
-    wx.navigateTo({
-      url: '../modifyinfo/modifyinfo',
+  formSubmit: function(e){
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  sexboy: function(){
+    this.setData({
+      sex: 1
     })
   },
-  tocharge: function(){
-    wx.navigateTo({
-      url: '../balance/balance',
-    })
-  },
-  tocoupon: function(){
-    wx.navigateTo({
-      url: '../coupon/coupon',
-    })
-  },
-  toscore: function(){
-    wx.navigateTo({
-      url: '../score/score',
+  sexgirl: function () {
+    this.setData({
+      sex: 2
     })
   }
 })

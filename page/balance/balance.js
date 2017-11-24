@@ -18,6 +18,7 @@ Page({
     this.setData({
       currentType: index,
       chargeAmt: this.data.amount[index],
+      inputMoney: this.data.amount[index]
     })
     this.onShow();
   },

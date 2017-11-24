@@ -1,1 +1,25 @@
-/* page/user/user.wxss */
+.container{
+  margin: 10px;
+}
+.info{
+  padding: 2.5px;
+  font-size: 18px;
+  width: 25%;
+}
+.flex-wrp{
+  display:flex;
+}
+.flex-item{
+  padding: 2.5px;
+  color: black;
+  font-size: 18px;
+  text-align:center;
+  border-right-color: #ADADAD;
+  background-color: #ffffff;
+}
+.modi{
+  width: 75%;
+  text-align: right;
+  color: #0000CD;
+  text-decoration: underline;
+}
