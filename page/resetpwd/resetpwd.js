@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isPwd: true,
+    show: '../tem/eye_closed.png',
   },
 
   /**
