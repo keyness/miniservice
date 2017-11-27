@@ -1,4 +1,4 @@
-// page/user/user.js
+// page/activate/activate.js
 Page({
 
   /**
@@ -62,50 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  modifyinfo: function(){
-    wx.navigateTo({
-      url: '../modifyinfo/modifyinfo',
-    })
-  },
-  toactivate: function(){
-    wx.navigateTo({
-      url: '../activate/activate',
-    })
-  },
-  tocharge: function(){
-    wx.navigateTo({
-      url: '../balance/balance',
-    })
-  },
-  tocoupon: function(){
-    wx.navigateTo({
-      url: '../coupon/coupon',
-    })
-  },
-  toscore: function(){
-    wx.navigateTo({
-      url: '../score/score',
-    })
-  },
-  totrans: function(){
-    wx.navigateTo({
-      url: '../trans/trans',
-    })
-  },
-  resetpwd: function(){
-    wx.navigateTo({
-      url: '../resetpwd/resetpwd',
-    })
-  },
-  callgm: function(){
-    wx.makePhoneCall({
-      phoneNumber: '12345678',
-    })
-  },
-  cardchange: function(){
-    wx.navigateTo({
-      url: '../cardchange/cardchange',
-    })
   }
 })

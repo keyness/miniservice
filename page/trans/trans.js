@@ -1,11 +1,21 @@
-// page/user/user.js
+// page/trans/trans.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    statusType: ["余额订单", "积分订单"],
+    currentType: 0,
+    tabClass: ["", ""]
+  },
+  statusTap: function (e) {
+    var curType = e.currentTarget.dataset.index;
+    this.data.currentType = curType
+    this.setData({
+      currentType: curType
+    });
+    this.onShow();
   },
 
   /**
@@ -62,50 +72,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  modifyinfo: function(){
-    wx.navigateTo({
-      url: '../modifyinfo/modifyinfo',
-    })
-  },
-  toactivate: function(){
-    wx.navigateTo({
-      url: '../activate/activate',
-    })
-  },
-  tocharge: function(){
-    wx.navigateTo({
-      url: '../balance/balance',
-    })
-  },
-  tocoupon: function(){
-    wx.navigateTo({
-      url: '../coupon/coupon',
-    })
-  },
-  toscore: function(){
-    wx.navigateTo({
-      url: '../score/score',
-    })
-  },
-  totrans: function(){
-    wx.navigateTo({
-      url: '../trans/trans',
-    })
-  },
-  resetpwd: function(){
-    wx.navigateTo({
-      url: '../resetpwd/resetpwd',
-    })
-  },
-  callgm: function(){
-    wx.makePhoneCall({
-      phoneNumber: '12345678',
-    })
-  },
-  cardchange: function(){
-    wx.navigateTo({
-      url: '../cardchange/cardchange',
-    })
   }
 })

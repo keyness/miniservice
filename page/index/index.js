@@ -15,5 +15,10 @@ Page({
     wx.navigateTo({
       url: '../coupon/coupon',
     })
+  },
+  checkRule: function(){
+    wx.navigateTo({
+      url: '../checkrule/checkrule',
+    })
   }
 })

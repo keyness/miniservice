@@ -14,30 +14,41 @@
   border-width: 1px;
   border-color: transparent;
   border-right-color: #ADADAD;
-  background-color: #ffffff;
 }
 .c{
   border-color: transparent;
 }
 .card{
   height: 170px;
-  background-color: greenyellow;
   margin-top: 20px;
   border-radius: 5%;
+  background-image: url('https://wx1.sinaimg.cn/mw690/5b6c511bgy1flwq6ntjzfj20rs0goacl.jpg');
+  background-size: cover;
 }
 .cardtitle{
-  padding: 5px;
+  padding-top: 10px;
+  margin: 10px;
   color: white;
   font-weight: 600;
   letter-spacing: 0.05cm;
-  font-size: 20px;
+  font-size: 25px;
   font-family:"Microsoft YaHei";
 }
 .cardmsg{
   padding: 5px;
+  margin: 10px;
   color: white;
   font-size: 15px;
 }
 progress{
   padding: 5px;
+  margin: 10px;
+}
+.rule{
+  width: 20%;
+  font-size: 13px;
+  color: white;
+  text-decoration: underline;
+  margin-top: 32px;
+  margin-left: 75%;
 }

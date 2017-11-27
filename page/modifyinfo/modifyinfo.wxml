@@ -2,16 +2,15 @@
   <view class="title">姓名:</view>
   <input name="realname" class="inputname" placeholder='realname' placeholder-style="font-size: 18px;color: #C7C7C7;"></input>
   <view class="title">性别:</view>
-    <view class="inputname" disabled='true' value='男' bindtap='sexboy' style='border-bottom-style:solid;border-bottom-color:#BDBDBD;border-bottom-width: thin'>
-      男<icon wx:if="{{sex == 1}}" class="icon-small icon" type="success_no_circle" size="22"></icon>
-    </view>
-    <view class="inputname" disabled='true' value='女' bindtap='sexgirl'>
-      女<icon wx:if="{{sex == 2}}" class="icon-small icon" type="success_no_circle" size="22"></icon>
-    </view>
+    <picker name='sex' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker inputname">
+        {{array[index]}}
+      </view>
+    </picker>
   <view class="title">出生日期:</view>
-  <picker name="birthday" mode="date" value="1994-05-19" start="1900-01-01" end="2017-11-24">
+  <picker name="birthday" mode="date" value="{{date}}" start="1900-01-01" end="2017-11-24" bindchange="changeDate">
     <view class="picker inputname">
-      1994-05-19
+      {{date}}
     </view>
   </picker>
   <button formType="submit" class="button" hover-class="button-hover" type='primary'>确定</button>

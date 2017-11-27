@@ -6,7 +6,7 @@
 <view class="curAccount">当前账户:{{account}}</view>
 <view class="section">
     <view class="rechargeAmt">充值金额:</view>
-    <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;">
+    <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;align-items: center;">
         <view wx:for="{{amount}}" class="flex-item {{inputMoney == item ? 'active' : ''}}" bindtap="money1"  style="border-color:{{pageBorderColor}};color:{{pageColor}}" data-index="{{index}}">
           <view class="{{inputMoney == item ? 'active' : ''}}" style="line-height:60px">{{item}}元</view>
         </view>

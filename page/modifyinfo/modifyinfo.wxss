@@ -10,11 +10,23 @@
   padding: 5px;
   padding-left: 20px;
   line-height: 40px;
+  width: 90%;
 }
 .button{
   margin: 10px;
   margin-top: 20px;
 }
-.icon{
+.inputicon{
+  width: 10%;
+  background-color: #F8F8FF;
+  height: 40px;
+  color: #000000;
+  padding: 5px;
+  padding-left: 20px;
   line-height: 40px;
+}
+.flex-wrp{
+    height: 40px;
+    display:flex;
+    background-color: #FFFFFF;
 }

@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    sex: 0,
+    index: 0,
+    date: '1994-05-19',
+    array: ['男','女'],
   },
 
   /**
@@ -66,14 +68,15 @@ Page({
   formSubmit: function(e){
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
   },
-  sexboy: function(){
+  changeDate: function(e){
     this.setData({
-      sex: 1
+      date: e.detail.value
     })
   },
-  sexgirl: function () {
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      sex: 2
+      index: e.detail.value
     })
-  }
+  },
 })

@@ -3,23 +3,24 @@
 <!--page/index/index.wxml-->
 
 <view class="page-section-spacing">
-  <image class="card" bindtap="bindUser" src="../tem/2.jpg">
+  <view class="card" bindtap="bindUser">
     <view class="cardtitle">普通会员</view>
-    <view class="cardmsg">再获取xxx点升级为银卡会员</view>
-    <progress percent="20" activeColor="orange" backgroundColor="lightgreen" stroke-width="9"/>
-  </image>
+    <view class="cardmsg">再获取xx点升级为银卡会员</view>
+    <progress percent="20" activeColor="#8470FF" backgroundColor="#76EE00" stroke-width="9"/>
+    <view class="rule" catchtap='checkRule'>查看规则</view>
+  </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view bindtap="goScore">
-      <view class="flex-item" style="color:lightgreen;font-size:40rpx">0分</view>
-      <view class="flex-item" >积分></view>
+    <view bindtap="goScore" class="flex-item">
+      <view style="color:lightgreen;font-size:40rpx">0分</view>
+      <view>积分></view>
     </view>
-    <view bindtap="goBalance">
-      <view class="flex-item" style="color:lightgreen;font-size:40rpx">0元</view>
-      <view class="flex-item" >余额·充值></view>
+    <view bindtap="goBalance" class="flex-item">
+      <view style="color:lightgreen;font-size:40rpx">0元</view>
+      <view>余额·充值></view>
     </view>
-    <view bindtap="goCoupon">
-      <view class="flex-item c" style="color:lightgreen;font-size:40rpx">x张</view>
-      <view class="flex-item c" >优惠券></view>
+    <view bindtap="goCoupon" class="flex-item c">
+      <view style="color:lightgreen;font-size:40rpx">x张</view>
+      <view>优惠券></view>
     </view>
   </view>
 </view>

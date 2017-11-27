@@ -2,3 +2,6 @@
   box-sizing: border-box;
   padding: 0 50rpx;
 }
+page{
+  background-color: #F2F2F2;
+}

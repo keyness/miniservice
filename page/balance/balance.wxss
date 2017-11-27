@@ -33,7 +33,6 @@
 .flex-wrp{
     height: 100px;
     display:flex;
-    background-color: #FFFFFF;
 }
 .active{
   border-color: lightgreen;

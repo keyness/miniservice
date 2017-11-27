@@ -1,0 +1,14 @@
+.activate{
+  background-color: #98FB98;
+  height: 150px;
+}
+.fontstyle{
+  color: white;
+  padding-left: 10px;
+}
+.num{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  line-height: 85px;
+}

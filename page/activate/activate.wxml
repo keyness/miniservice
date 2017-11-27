@@ -1,0 +1,4 @@
+<view class="activate">
+  <view class="fontstyle">当前活跃值:</view>
+  <view class="num">0</view>
+</view>

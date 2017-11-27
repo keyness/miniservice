@@ -6,13 +6,18 @@
     "page/balance/balance",
     "page/baldetail/baldetail",
     "page/coupon/coupon",
-    "page/modifyinfo/modifyinfo"
+    "page/modifyinfo/modifyinfo",
+    "page/activate/activate",
+    "page/trans/trans",
+    "page/resetpwd/resetpwd",
+    "page/cardchange/cardchange",
+    "page/checkrule/checkrule"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "演示",
     "navigationBarBackgroundColor": "#98FB98",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F2F2F2"
   },
   "networkTimeout": {
     "request": 10000,
