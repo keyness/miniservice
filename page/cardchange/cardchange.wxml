@@ -1,2 +1,28 @@
-<!--page/cardchange/cardchange.wxml-->
-<text>page/cardchange/cardchange.wxml</text>
+<view class='currAccount'>
+  <icon type="download" size="45"></icon>
+  <view class='title'>当前会员账号</view>
+  <view class='account'>133 1234 5678</view>
+</view>
+<form bindsubmit="formSubmit">
+  <view class='enterpwd'>
+    <view class='newPhone' style="flex-direction:row;">
+      <icon class='icon' type="download" size="25"></icon>
+      <input name='newPhone' class='pwd' type='number' maxlength='11' placeholder='新手机号' placeholder-style='font-size: 17px;' bindinput='getPhone'></input>
+    </view>
+    <view class='code' style="flex-direction:row;">
+      <icon class='icon' type="download" size="25"></icon>
+      <input name='code' class='pwd' type='number' maxlength='4' placeholder='短信验证码' placeholder-style='font-size: 17px;' bindinput='inputCode'></input>
+      <view wx:if='{{isRightPhone == false}}' class='getCode' style='color: grey;'>{{getMsg}}</view>
+      <view wx:if='{{isRightPhone == true}}' class='getCode' style='color: #00CD00;' bindtap='getCode'>{{getMsg}}</view>
+    </view>
+    <button type='primary' disabled='true' formType="submit" class="button" hover-class="button-hover" wx:if='{{hasInfo == false}}' style='background-color: #CCCCCC;'>立即换卡</button>
+    <button type='primary' formType="submit" class="button" hover-class="button-hover" wx:if='{{hasInfo == true}}'>立即换卡</button>
+  </view>
+</form>
+<view class='memo'>
+  <view class='warning'>*换卡将执行如下操作,请确认后谨慎操作</view>
+  <view class='info'>1、注销当前账号,余额及消费记录等信息转移至新账号中;</view>
+  <view class='info'>2、更新微信和手机号的绑定关系;</view>
+  <view class='info'>3、更新微信会员卡中设置的手机号码;</view>
+  <view class='info'>4、新旧任一账号处于锁定或挂失状态时,不可执行自助换卡操作。</view>
+</view>

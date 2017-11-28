@@ -25,7 +25,6 @@
   width: 70%;
   text-align: right;
   color: #0000CD;
-  text-decoration: underline;
 }
 .flex-wrp{
     height: 40px;
