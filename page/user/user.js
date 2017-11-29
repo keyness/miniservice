@@ -107,5 +107,10 @@ Page({
     wx.navigateTo({
       url: '../cardchange/cardchange',
     })
+  },
+  myvip: function(){
+    wx.navigateTo({
+      url: '../myvip/myvip',
+    })
   }
 })

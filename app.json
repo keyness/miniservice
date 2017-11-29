@@ -11,7 +11,9 @@
     "page/trans/trans",
     "page/resetpwd/resetpwd",
     "page/cardchange/cardchange",
-    "page/checkrule/checkrule"
+    "page/checkrule/checkrule",
+    "page/myvip/myvip",
+    "page/shop/shop"
   ],
   "window": {
     "navigationBarTextStyle": "black",

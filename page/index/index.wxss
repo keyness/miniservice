@@ -4,8 +4,7 @@
   display:flex;
 }
 .flex-item{
-  width: 200rpx;
-  height: 50rpx;
+  width: 300rpx;
   font-size: 26rpx;
   color: black;
   text-align:center;
@@ -51,4 +50,11 @@ progress{
   text-decoration: underline;
   margin-top: 32px;
   margin-left: 75%;
+}
+.shop-box{
+  margin-top: 120px;
+}
+.shop-item{
+  text-align: center;
+  color: #0000CD;
 }

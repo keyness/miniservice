@@ -1,0 +1,26 @@
+.container{
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #D4D4D4;
+}
+.addressBox{
+  display: flex;
+}
+.title{
+  width: 75%;
+  font-size: 23px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.distance{
+  font-size: 17px;
+  width: 25%;
+  text-align: right;
+  color: #CD8500;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.address{
+  margin: 10px;
+  font-size: 16px;
+}

@@ -1,6 +1,6 @@
 <form bindsubmit="formSubmit">
   <view class="title">姓名:</view>
-  <input name="realname" class="inputname" placeholder='realname' placeholder-style="font-size: 18px;color: #C7C7C7;"></input>
+  <input maxlength='12' name="realname" class="inputname" placeholder='realname' placeholder-style="font-size: 18px;color: #C7C7C7;"></input>
   <view class="title">性别:</view>
     <picker name='sex' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
       <view class="picker inputname">

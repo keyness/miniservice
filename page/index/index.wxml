@@ -24,3 +24,7 @@
     </view>
   </view>
 </view>
+
+<view class='shop-box'>
+  <view class='shop-item' bindtap='toShop'>附近门店 ></view>
+</view>

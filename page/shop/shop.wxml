@@ -1,0 +1,9 @@
+<view>
+  <view bindtap='bindmap' data-key="{{item.location}}" class='container' wx:for="{{address}}">
+    <view class='addressBox' style='flex-direction: row;'>
+      <view class='title'>{{item.title}}</view>
+      <view class='distance'>{{item._distance}}米</view>
+    </view>
+    <view class='address'>{{item.address}}</view>
+  </view>
+</view>

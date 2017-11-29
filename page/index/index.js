@@ -20,5 +20,10 @@ Page({
     wx.navigateTo({
       url: '../checkrule/checkrule',
     })
+  },
+  toShop: function(){
+    wx.navigateTo({
+      url: '../shop/shop',
+    })
   }
 })

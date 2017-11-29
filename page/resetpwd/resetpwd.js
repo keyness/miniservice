@@ -69,7 +69,6 @@ Page({
   showPwd: function(){
     var that = this
     var isPwd = this.data.isPwd
-    console.log(isPwd)
     if(isPwd){
       that.setData({
         isPwd: false,
@@ -85,7 +84,6 @@ Page({
   showConPwd: function () {
     var that = this
     var isConPwd = this.data.isConPwd
-    console.log(isConPwd)
     if (isConPwd) {
       that.setData({
         isConPwd: false,
