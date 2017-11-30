@@ -7,11 +7,11 @@
 <view class="section">
     <view class="rechargeAmt">充值金额:</view>
     <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;align-items: center;">
-        <view wx:for="{{amount}}" class="flex-item {{inputMoney == item ? 'active' : ''}}" bindtap="money1"  style="border-color:{{pageBorderColor}};color:{{pageColor}}" data-index="{{index}}">
+        <view wx:key='{{amount}}' wx:for="{{amount}}" class="flex-item {{inputMoney == item ? 'active' : ''}}" bindtap="money1"  style="border-color:{{pageBorderColor}};color:{{pageColor}}" data-index="{{index}}">
           <view class="{{inputMoney == item ? 'active' : ''}}" style="line-height:60px">{{item}}元</view>
         </view>
     </view>
-    <input bindinput="bindKeyInput" placeholder='请输入充值金额,最低1元' placeholder-style="font-size: 15px;color: #C7C7C7;" type="number" class='input' value="{{chargeAmt}}"></input>
+    <input bindinput="bindKeyInput" maxlength='4' placeholder='请输入充值金额,最低1元' placeholder-style="font-size: 15px;color: #C7C7C7;" type="number" class='input' value="{{chargeAmt}}"></input>
     <button wx:if="{{inputMoney == null || inputMoney < 1}}" class="button" type="primary" disabled="true">立即支付</button>
     <button wx:if="{{inputMoney >=1}}" class="button" type="primary" hover-class="button-hover" bindtap="toPay" data-amt="{{inputMoney}}">立即支付</button>
 </view>

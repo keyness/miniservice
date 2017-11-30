@@ -1,9 +1,9 @@
 <view>
-  <view bindtap='bindmap' data-key="{{item.location}}" class='container' wx:for="{{address}}">
+  <view bindtap='bindmap' data-key="{{item.location}}" data-title='{{item.title}}' data-tel='{{item.tel}}' data-distance='{{item._distance}}' data-address='{{item.address}}' class='container' wx:for="{{address}}" wx:key='{{item.title}}'>
     <view class='addressBox' style='flex-direction: row;'>
-      <view class='title'>{{item.title}}</view>
-      <view class='distance'>{{item._distance}}米</view>
+      <view catchtap='bindmap' data-key="{{item.location}}" data-title='{{item.title}}' data-tel='{{item.tel}}' data-distance='{{item._distance}}' data-address='{{item.address}}' class='title'>{{item.title}}</view>
+      <view catchtap='bindmap' data-key="{{item.location}}" data-title='{{item.title}}' data-tel='{{item.tel}}' data-distance='{{item._distance}}' data-address='{{item.address}}' class='distance'>{{item._distance}}米</view>
     </view>
-    <view class='address'>{{item.address}}</view>
+    <view catchtap='bindmap' data-key="{{item.location}}" data-title='{{item.title}}' data-tel='{{item.tel}}' data-distance='{{item._distance}}' data-address='{{item.address}}' class='address'>{{item.address}}</view>
   </view>
 </view>

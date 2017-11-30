@@ -1,0 +1,14 @@
+<map latitude='{{latitude}}' markers='{{markers}}' longitude='{{longitude}}' show-location style="width: 100%; height: 470px;" scale='{{scale}}' bindmarkertap='clickMarker'></map>
+<view class='addressContainer'>
+  <view class='addressBox' style='flex-direction: row;'>
+    <view class='title'>{{title}}</view>
+    <view class='distance'>{{distance}}km</view>
+  </view>
+  <view class='address'>{{tel}}</view>
+</view>
+<view class='mapbox' style='flex-direction: row;'>
+  <icon class='icon' type="download" size="25"></icon>
+  <view class='info' style='border-right-style: solid;border-right-width: thin;border-right-color: #D4D4D4;' bindtap='toMap' data-title='{{title}}' data-address='{{address}}' data-lat='{{latitude}}' data-lng='{{longitude}}'>地图导航</view>
+  <icon class='icon' type="download" size="25"></icon>
+  <view class='info' bindtap='toCall' data-tel='{{tel}}'>联系门店</view>
+</view>

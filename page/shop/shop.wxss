@@ -8,7 +8,7 @@
 }
 .title{
   width: 75%;
-  font-size: 23px;
+  font-size: 21px;
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -22,5 +22,5 @@
 }
 .address{
   margin: 10px;
-  font-size: 16px;
+  font-size: 15px;
 }

@@ -1,0 +1,47 @@
+.addressBox{
+  display: flex;
+}
+.title{
+  width: 75%;
+  font-size: 21px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.distance{
+  font-size: 17px;
+  width: 25%;
+  text-align: right;
+  color: #CD8500;
+  line-height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.address{
+  margin: 10px;
+  font-size: 15px;
+}
+.addressContainer{
+  background-color: #ffffff;
+  border-bottom-color: #D4D4D4;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+.icon{
+  width:25%;
+  text-align: right;
+  margin-top: 13px;
+}
+.info{
+  width: 50%;
+  font-size: 21px;
+  line-height: 50px;
+  margin-left: 2px;
+}
+.mapbox{
+  display: flex;
+  height: 50px;
+  background-color: #ffffff;
+  border-bottom-color: #D4D4D4;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}

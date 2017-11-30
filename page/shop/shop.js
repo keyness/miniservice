@@ -24,7 +24,7 @@ Page({
       success: function (res) {
         console.log(res);
         that.setData({
-          address: res.data
+          address: res.data,
         })
       },
       fail: function (res) {
@@ -83,15 +83,17 @@ Page({
   },
   bindmap: function (e) {
     var location = e.target.dataset.key;
-    console.log(location)
-    console.log(location.lat)
-    console.log(location.lng)
-    // wx.navigateTo({
-    //   url: '../mapdetail/mapdetail?lat='+location.lat+"&lng="+location.lng,
-    // })
-    wx.openLocation({
-      latitude: location.lat,
-      longitude: location.lng,
+    var title = e.target.dataset.title;
+    var tel = e.target.dataset.tel;
+    var distance = Number(e.target.dataset.distance) / 1000;
+    var address = e.target.dataset.address;
+    distance = distance.toFixed(1)
+    wx.navigateTo({
+      url: '../map/map?lat=' + location.lat + "&lng=" + location.lng + "&title=" + title + "&tel=" + tel + "&distance=" + distance + "&address=" + address,
     })
+    // wx.openLocation({
+    //   latitude: location.lat,
+    //   longitude: location.lng,
+    // })
   }
 })

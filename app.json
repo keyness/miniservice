@@ -13,7 +13,8 @@
     "page/cardchange/cardchange",
     "page/checkrule/checkrule",
     "page/myvip/myvip",
-    "page/shop/shop"
+    "page/shop/shop",
+    "page/map/map"
   ],
   "window": {
     "navigationBarTextStyle": "black",
