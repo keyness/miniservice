@@ -4,3 +4,8 @@
         <view class="{{tabClass[index]}}"></view>
     </view>
 </view>
+<view class='coupon-box'>
+  <view wx:if='{{currentType == 0}}'>未使用的优惠券</view>
+  <view wx:if='{{currentType == 1}}'>已使用的优惠券</view>
+  <view wx:if='{{currentType == 2}}'>已过期的优惠券</view>
+</view>

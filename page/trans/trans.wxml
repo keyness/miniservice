@@ -4,3 +4,7 @@
         <view class="{{tabClass[index]}}"></view>
     </view>
 </view>
+<view class='order-box'>
+  <view wx:if='{{currentType == 0}}'>余额订单</view>
+  <view wx:if='{{currentType == 1}}'>积分订单</view>
+</view>

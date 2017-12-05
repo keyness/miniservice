@@ -28,6 +28,14 @@ Page({
     console.log(amt)
   },
   bindKeyInput: function (e) {
+    var input = e.detail.value
+    if(input > 1000){
+      this.setData({
+        chargeAmt: 1000,
+        inputMoney: 1000
+      })
+      return
+    }
     this.setData({
       inputMoney: e.detail.value
     })
