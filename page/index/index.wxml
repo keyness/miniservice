@@ -5,8 +5,6 @@
 <view class="page-section-spacing">
   <view class="card" bindtap="bindUser">
     <view class="cardtitle">普通会员</view>
-    <view class="cardmsg">再获取xx点升级为银卡会员</view>
-    <progress percent="20" activeColor="#8470FF" backgroundColor="#76EE00" stroke-width="9"/>
     <view class="rule" catchtap='checkRule'>查看规则</view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">

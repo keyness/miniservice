@@ -6,9 +6,11 @@ Page({
    */
   data: {
     isPwd: true,
-    show: '../tem/eye_closed.png',
+    show: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
     isConPwd: true,
-    showCon: '../tem/eye_closed.png',
+    showCon: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+    pwdFocus: false,
+    pwdConFocus: false,
   },
 
   /**
@@ -72,12 +74,14 @@ Page({
     if(isPwd){
       that.setData({
         isPwd: false,
-        show: '../tem/eye_open.png'
+        show: 'http://172.16.94.125/card-img/miniservice/eye_open.png',
+        pwdFocus: true,
       })
     }else{
       that.setData({
         isPwd: true,
-        show: '../tem/eye_closed.png'
+        show: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+        pwdFocus: true,
       })
     }
   },
@@ -87,12 +91,14 @@ Page({
     if (isConPwd) {
       that.setData({
         isConPwd: false,
-        showCon: '../tem/eye_open.png'
+        showCon: 'http://172.16.94.125/card-img/miniservice/eye_open.png',
+        pwdConFocus: true,
       })
     } else {
       that.setData({
         isConPwd: true,
-        showCon: '../tem/eye_closed.png'
+        showCon: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+        pwdConFocus: true,
       })
     }
   },
