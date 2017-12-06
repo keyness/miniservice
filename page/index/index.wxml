@@ -5,24 +5,26 @@
 <view class="page-section-spacing">
   <view class="card" bindtap="bindUser">
     <view class="cardtitle">普通会员</view>
-    <view class="rule" catchtap='checkRule'>查看规则</view>
+    <!-- <progress percent="20" activeColor="white" backgroundColor="grey" active="true" 
+    stroke-width="9" style="margin-top:25%;margin-bottom:75%"/> -->
+    <!-- <view class="rule" catchtap='checkRule' style="margin-top:40%">查看规则</view> -->
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
     <view bindtap="goScore" class="flex-item">
-      <view style="color: #CD2626;font-size: 40rpx">{{score}}分</view>
-      <view>积分></view>
+      <view style="font-style:normal;font-weight:100;font-size:30rpx">0分</view>
+      <view style="font-style:normal;font-weight:600;font-size:30rpx;">积分></view>
     </view>
     <view bindtap="goBalance" class="flex-item">
-      <view style="color: #CD2626;font-size: 40rpx">{{bal}}元</view>
-      <view>余额·充值></view>
+      <view style="font-style:normal;font-weight:100;font-size:30rpx">0元</view>
+      <view style="font-style:normal;font-weight:600;font-size:30rpx">余额·充值></view>
     </view>
     <view bindtap="goCoupon" class="flex-item c">
-      <view style="color: #CD2626;font-size: 40rpx">{{coupon}}张</view>
-      <view>优惠券></view>
+      <view style="font-style:normal;font-weight:100;font-size:30rpx">x张</view>
+      <view style="font-style:normal;font-weight:600;font-size:30rpx">优惠券></view>
     </view>
   </view>
 </view>
 
 <view class='shop-box'>
-  <view class='shop-item' bindtap='toShop'>附近门店 ></view>
+  <view class='shop-item' bindtap='toShop' style="font-style:normal;font-weight:600;color:black;font-size:30rpx"><icon class="iconfont icon-ditu" style="font-size:55rpx;color:red"></icon>看看离您最近的门店在哪里？ </view>
 </view>

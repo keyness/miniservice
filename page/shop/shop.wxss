@@ -14,7 +14,7 @@
 }
 .distance{
   font-size: 17px;
-  width: 30%;
+  width: 25%;
   text-align: right;
   color: #CD8500;
   line-height: 30px;

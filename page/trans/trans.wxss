@@ -17,7 +17,7 @@
     position: relative;
 }
 .status-box .status-label.active{
-    color: #CD2626;
+    color:#CD2626;
     border-bottom: 6rpx solid #CD2626;
 }
 .order-box{

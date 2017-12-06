@@ -21,7 +21,7 @@
   height: 170px;
   margin-top: 20px;
   border-radius: 5%;
-  background-image: url('http://172.16.94.125/card-img/miniservice/3.jpg');
+  background-image: url('https://wx1.sinaimg.cn/mw690/5b6c511bgy1fm5wycamabj20hs08ggly.jpg');
   background-size: cover;
 }
 .cardtitle{
@@ -33,12 +33,22 @@
   font-size: 25px;
   font-family:"Microsoft YaHei";
 }
+.cardmsg{
+  padding: 5px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
+}
+progress{
+  padding: 5px;
+  margin: 10px;
+}
 .rule{
   width: 20%;
   font-size: 13px;
   color: white;
   text-decoration: underline;
-  margin-top: 100px;
+  margin-top: 32px;
   margin-left: 75%;
 }
 .shop-box{

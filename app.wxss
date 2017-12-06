@@ -5,3 +5,6 @@
 page{
   background-color: #F2F2F2;
 }
+
+@import "page/lib/iconfont.wxss";
+

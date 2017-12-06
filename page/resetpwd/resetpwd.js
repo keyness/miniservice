@@ -1,4 +1,17 @@
 // page/resetpwd/resetpwd.js
+
+function formatPhone(phone) {
+  phone = phone.toString();
+  var str = '';
+  for (var i = 0; i < phone.toString().length; i++) {
+    if (i == 3 || i == 7) {
+      str += ' ';
+    }
+    str += phone[i];
+  }
+  return str;
+}
+
 Page({
 
   /**
@@ -6,18 +19,23 @@ Page({
    */
   data: {
     isPwd: true,
-    show: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+    show: '../tem/eye_closed.png',
     isConPwd: true,
-    showCon: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+    showCon: '../tem/eye_closed.png',
     pwdFocus: false,
     pwdConFocus: false,
+    account: 13312345678,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var account = this.data.account
+    account = formatPhone(account)
+    this.setData({
+      account: account
+    })
   },
 
   /**
@@ -74,13 +92,13 @@ Page({
     if(isPwd){
       that.setData({
         isPwd: false,
-        show: 'http://172.16.94.125/card-img/miniservice/eye_open.png',
+        show: '../tem/eye_open.png',
         pwdFocus: true,
       })
     }else{
       that.setData({
         isPwd: true,
-        show: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+        show: '../tem/eye_closed.png',
         pwdFocus: true,
       })
     }
@@ -91,13 +109,13 @@ Page({
     if (isConPwd) {
       that.setData({
         isConPwd: false,
-        showCon: 'http://172.16.94.125/card-img/miniservice/eye_open.png',
+        showCon: '../tem/eye_open.png',
         pwdConFocus: true,
       })
     } else {
       that.setData({
         isConPwd: true,
-        showCon: 'http://172.16.94.125/card-img/miniservice/eye_closed.png',
+        showCon: '../tem/eye_closed.png',
         pwdConFocus: true,
       })
     }

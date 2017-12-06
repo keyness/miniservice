@@ -1,5 +1,12 @@
 <!--page/score/score.wxml-->
 <view class="score">
-  <view class="fontstyle">当前积分:</view>
-  <view class="num">{{score}}分</view>
+    <view class="num"> {{score}}</view>
+    <view bindtap='goSocreDetail' class="fontstyle"><icon class="iconfont icon-jifen" style="color:white;font-size:40rpx"/>可用积分</view>
+</view>
+<view class='container'>
+ <view class="flex-wrp" style="flex-direction:row;">
+    <view class="scoretype"><icon class="iconfont icon-jf" style="color:red;font-size:40rpx"></icon>已用积分: </view>
+    <view class="flex-item modi" bindtap="toscore">使用详情></view>
+  </view>
+    <view class="scoretype"><icon class="iconfont icon-jf" style="color:red;font-size:40rpx"></icon>过期积分: </view>
 </view>

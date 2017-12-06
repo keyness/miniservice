@@ -6,19 +6,20 @@
 .fontstyle{
   color: white;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 0;
 }
 .num{
   text-align: center;
+  font-weight: 600px;
   font-size: 30px;
   color: white;
   line-height: 100px;
 }
 .curAccount{
-  color: lightgrey;
+  color: black;
   padding: 5px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .flex-item{
   width: 90px;
@@ -39,9 +40,9 @@
   color: #CD2626;
 }
 .rechargeAmt{
-  color: lightgrey;
+  color: black;
   padding: 5px;
-  font-size: 20px;
+  font-size: 15px;
 }
 .input{
   background-color: #F8F8FF;
@@ -49,7 +50,7 @@
   margin: 10px;
   border-radius: 5%;
   padding-left: 20px;
-  color: #C7C7C7;
+  color: black;
 }
 .button{
   margin: 10px;

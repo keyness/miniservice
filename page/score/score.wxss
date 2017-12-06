@@ -2,14 +2,43 @@
 .score{
   background-color: #CD2626;
   height: 150px;
+  flex-direction:row;
 }
 .fontstyle{
   color: white;
-  padding-left: 10px;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0;
 }
 .num{
   text-align: center;
   font-size: 30px;
   color: white;
   line-height: 85px;
+}
+.scoretype{
+  text-align: left;
+  font-style: normal;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+.flex-item{
+  padding: 3px;
+  color: black;
+  font-size: 18px;
+  text-align:center;
+  border-right-color: #ADADAD;
+}
+.modi{
+  width: 70%;
+  text-align: right;
+  font-size:27rpx;
+  color: #0000CD;
+}
+.flex-wrp{
+    height: 40px;
+    display:flex;
+    background-color: #FFFFFF;
+    align-items: center;
 }

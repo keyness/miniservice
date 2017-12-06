@@ -1,9 +1,9 @@
 <!--page/balance/balance.wxml-->
 <view class="score">
   <view class="num">¥ {{balance}}</view>
-  <view bindtap='goBalDetail' class="fontstyle">♪查看余额明细</view>
+  <view bindtap='goBalDetail' class="fontstyle"><icon class="iconfont icon-yue1" style="color:white;font-size:40rpx"/>查看余额明细</view>
 </view>
-<view class="curAccount">当前账户:{{account}}</view>
+<!-- <view class="curAccount">当前账户:{{account}}</view> -->
 <view class="section">
     <view class="rechargeAmt">充值金额:</view>
     <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;align-items: center;">

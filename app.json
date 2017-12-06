@@ -15,6 +15,7 @@
     "page/myvip/myvip",
     "page/shop/shop",
     "page/map/map"
+  
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -29,4 +30,5 @@
     "downloadFile": 10000
   },
   "debug": false
+  
 }
