@@ -42,10 +42,25 @@
     <view style='font-weight: bold;text-align: left;width: 35%;line-height: 40px;font-style=normal;font-size:35rpx;font-weight:600;color:red'>></view>
   </view>
 </view>
-<view class='container'>
+<view class='container' style='height: 70px;'>
   <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;">
-    <view style='line-height: 40px;font-size: 16px;' bindtap='cardchange'><icon class="iconfont icon-huanqia" style="color:grey;font-size:40rpx"></icon>自助换卡</view>
-    <view style='line-height: 40px;font-size: 16px;' bindtap='resetpwd'><icon class="iconfont icon-zhongzhimima1" style="color:orange;font-size:45rpx"></icon>重置密码</view>
-    <view style='line-height: 40px;font-size: 16px;' bindtap='callgm'><icon class="iconfont icon-kefu" style="color:#46A3FF;font-size:50rpx"></icon>联系客服</view>
+    <view style='line-height: 40px;font-size: 16px;' bindtap='cardchange'>
+      <view style='text-align: center;'>
+        <icon class="iconfont icon-huanqia" style="color:grey;font-size:40rpx"></icon>
+      </view>
+      自助换卡
+    </view>
+    <view style='line-height: 40px;font-size: 16px;' bindtap='resetpwd'>
+    <view style='text-align: center;'>
+      <icon class="iconfont icon-zhongzhimima1" style="color:orange;font-size:45rpx"></icon>
+    </view>
+    重置密码
+    </view>
+    <view style='line-height: 40px;font-size: 16px;' bindtap='callgm'>
+    <view style='text-align: center;'>
+      <icon class="iconfont icon-kefu" style="color:#46A3FF;font-size:50rpx"></icon>
+    </view>
+    联系客服
+    </view>
   </view>
 </view>
