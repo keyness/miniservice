@@ -17,9 +17,9 @@
     "page/map/map"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "演示",
-    "navigationBarBackgroundColor": "#98FB98",
+    "navigationBarBackgroundColor": "#CD2626",
     "backgroundColor": "#F2F2F2"
   },
   "networkTimeout": {

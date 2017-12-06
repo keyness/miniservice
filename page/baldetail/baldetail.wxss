@@ -1,6 +1,6 @@
 /* page/baldetail/baldetail.wxss */
 .score{
-  background-color: #98FB98;
+  background-color: #CD2626;
   height: 150px;
 }
 .fontstyle{

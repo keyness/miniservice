@@ -17,8 +17,8 @@
     position: relative;
 }
 .status-box .status-label.active{
-    color:lightgreen;
-    border-bottom: 6rpx solid lightgreen;
+    color: #CD2626;
+    border-bottom: 6rpx solid #CD2626;
 }
 .order-box{
   margin: 30rpx;

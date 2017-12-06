@@ -1,6 +1,6 @@
 /* page/balance/balance.wxss */
 .score{
-  background-color: #98FB98;
+  background-color: #CD2626;
   height: 150px;
 }
 .fontstyle{
@@ -35,8 +35,8 @@
     display:flex;
 }
 .active{
-  border-color: lightgreen;
-  color: lightgreen;
+  border-color: #CD2626;
+  color: #CD2626;
 }
 .rechargeAmt{
   color: lightgrey;
