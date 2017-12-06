@@ -8,7 +8,7 @@
       </view>
     </picker>
   <view class="title">出生日期:</view>
-  <picker name="birthday" mode="date" value="{{date}}" start="1900-01-01" end="2017-11-24" bindchange="changeDate">
+  <picker name="birthday" mode="date" value="{{date}}" start="1900-01-01" end="2037-01-01" bindchange="changeDate">
     <view class="picker inputname">
       {{date}}
     </view>

@@ -1,5 +1,5 @@
 <!--page/score/score.wxml-->
 <view class="score">
   <view class="fontstyle">当前积分:</view>
-  <view class="num">0分</view>
+  <view class="num">{{score}}分</view>
 </view>

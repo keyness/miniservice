@@ -1,7 +1,7 @@
 <view class='currAccount'>
   <icon type="download" size="45"></icon>
   <view class='title'>当前会员账号</view>
-  <view class='account'>133 1234 5678</view>
+  <view class='account'>{{account}}</view>
 </view>
 <form bindsubmit="formSubmit">
   <view class='enterpwd'>

@@ -9,15 +9,15 @@
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
     <view bindtap="goScore" class="flex-item">
-      <view style="color: #CD2626;font-size: 40rpx">0分</view>
+      <view style="color: #CD2626;font-size: 40rpx">{{score}}分</view>
       <view>积分></view>
     </view>
     <view bindtap="goBalance" class="flex-item">
-      <view style="color: #CD2626;font-size: 40rpx">0元</view>
+      <view style="color: #CD2626;font-size: 40rpx">{{bal}}元</view>
       <view>余额·充值></view>
     </view>
     <view bindtap="goCoupon" class="flex-item c">
-      <view style="color: #CD2626;font-size: 40rpx">x张</view>
+      <view style="color: #CD2626;font-size: 40rpx">{{coupon}}张</view>
       <view>优惠券></view>
     </view>
   </view>
