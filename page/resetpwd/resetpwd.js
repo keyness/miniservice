@@ -92,7 +92,7 @@ Page({
     if(isPwd){
       that.setData({
         isPwd: false,
-        show: '../tem/eye_open.png',
+        show: 'https://wx1.sinaimg.cn/mw690/5b6c511bgy1fm77wk628hj201c01ca9v.jpg',
         pwdFocus: true,
       })
     }else{

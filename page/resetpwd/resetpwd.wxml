@@ -1,5 +1,5 @@
 <view class='currAccount'>
-  <icon type="download" size="45"></icon>
+  <icon class="iconfont icon-zhongzhimima1" style="color:orange;font-size:90rpx"></icon>
   <view class='title'>当前会员账号</view>
   <view class='account'>{{account}}</view>
 </view>
