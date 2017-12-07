@@ -1,66 +1,66 @@
 <view class='container'>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-hp-7account-on" style="color:red;font-size:50rpx"></icon>会员账号: </view>
+    <view class="info"><icon class="iconfont icon-hp-7account-on" style="color:#8B1A1A;font-size:50rpx"></icon> 会员账号: </view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-xingming" style="color:red;font-size:40rpx"></icon>姓名: </view>
+    <view class="info"><icon class="iconfont icon-xingming" style="color:#8B1A1A;font-size:40rpx"></icon> 姓名: </view>
     <view class="flex-item modi" bindtap="modifyinfo">修改></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-xingbie" style="color:red;font-size:40rpx"></icon>性别: </view>
+    <view class="info"><icon class="iconfont icon-xingbie" style="color:#8B1A1A;font-size:40rpx"></icon> 性别: </view>
     <view class="flex-item modi"></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-chushengnianyue1" style="color:red;font-size:40rpx"></icon>出生日期: </view>
+    <view class="info"><icon class="iconfont icon-chushengnianyue1" style="color:#8B1A1A;font-size:40rpx"></icon> 出生日期: </view>
     <view class="flex-item modi"></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-huiyuandengji" style="color:red;font-size:40rpx"></icon>会员等级: </view>
+    <view class="info"><icon class="iconfont icon-huiyuandengji" style="color:#8B1A1A;font-size:40rpx"></icon> 会员等级: </view>
     <view class="flex-item modi" bindtap="myvip">我的特权></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-yonghuhuoyuezhi" style="color:red;font-size:40rpx"></icon>活跃值: </view>
+    <view class="info"><icon class="iconfont icon-yonghuhuoyuezhi" style="color:#8B1A1A;font-size:40rpx"></icon> 活跃值: </view>
     <view class="flex-item modi" bindtap="toactivate">查看></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-yue1" style="color:red;font-size:40rpx"></icon>账户余额: </view>
+    <view class="info"><icon class="iconfont icon-yue1" style="color:#8B1A1A;font-size:40rpx"></icon> 账户余额: </view>
     <view class="flex-item modi" bindtap="tocharge">充值></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-youhuiquanquanmian" style="color:red;font-size:40rpx"></icon>优惠券: </view>
+    <view class="info"><icon class="iconfont icon-youhuiquanquanmian" style="color:#8B1A1A;font-size:40rpx"></icon> 优惠券: </view>
     <view class="flex-item modi" bindtap="tocoupon">查看></view>
   </view>
   <view class="flex-wrp" style="flex-direction:row;">
-    <view class="info"><icon class="iconfont icon-jf" style="color:red;font-size:40rpx"></icon>积分: </view>
+    <view class="info"><icon class="iconfont icon-jf" style="color:#8B1A1A;font-size:40rpx"></icon> 积分: </view>
     <view class="flex-item modi" bindtap="toscore">查看></view>
   </view>
 </view>
 <view class='container'>
   <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;" bindtap='totrans'>
     
-    <view style='text-align: right;width: 65%;margin-right: 10px;line-height: 40px;font-style=normal;font-size:35rpx;font-weight:600'><icon type="search" size="17" color="red"></icon>我的消费记录</view>
-    <view style='font-weight: bold;text-align: left;width: 35%;line-height: 40px;font-style=normal;font-size:35rpx;font-weight:600;color:red'>></view>
+    <view style='text-align: right;width: 65%;margin-right: 10px;line-height: 40px;font-style=normal;font-size:35rpx;font-weight:600;'><icon type="search" size="17" color="#8B1A1A"></icon> 我的消费记录</view>
+    <view style='font-weight: bold;text-align: left;width: 35%;line-height: 40px;font-style=normal;font-size:35rpx;font-weight:600;color:#8B1A1A'>></view>
   </view>
 </view>
 <view class='container' style='height: 70px;'>
   <view class="flex-wrp" style="flex-direction:row;justify-content: space-around;">
-    <view style='line-height: 40px;font-size: 16px;' bindtap='cardchange'>
+    <view style='line-height: 35px;font-size: 16px;' bindtap='cardchange'>
       <view style='text-align: center;'>
-        <icon class="iconfont icon-huanqia" style="color:grey;font-size:40rpx"></icon>
+        <icon class="iconfont icon-huanqia" style="color: #AAAAAA;font-size:40rpx"></icon>
       </view>
       自助换卡
     </view>
-    <view style='line-height: 40px;font-size: 16px;' bindtap='resetpwd'>
-    <view style='text-align: center;'>
-      <icon class="iconfont icon-zhongzhimima1" style="color:orange;font-size:45rpx"></icon>
+    <view style='line-height: 35px;font-size: 16px;' bindtap='resetpwd'>
+      <view style='text-align: center;'>
+        <icon class="iconfont icon-zhongzhimima1" style="color:orange;font-size:45rpx"></icon>
+      </view>
+      重置密码
     </view>
-    重置密码
-    </view>
-    <view style='line-height: 40px;font-size: 16px;' bindtap='callgm'>
-    <view style='text-align: center;'>
-      <icon class="iconfont icon-kefu" style="color:#46A3FF;font-size:50rpx"></icon>
-    </view>
-    联系客服
+    <view style='line-height: 35px;font-size: 16px;' bindtap='callgm'>
+      <view style='text-align: center;'>
+        <icon class="iconfont icon-kefu" style="color:#46A3FF;font-size:50rpx"></icon>
+      </view>
+      联系客服
     </view>
   </view>
 </view>

@@ -1,16 +1,16 @@
 <view class='currAccount'>
-  <icon class='iconfont icon-huanqia' style="color:grey;font-size:90rpx" ></icon>
+  <icon class='iconfont icon-huanqia' style="color:#AAAAAA;font-size:90rpx" ></icon>
   <view class='title'>当前会员账号</view>
   <view class='account'>{{account}}</view>
 </view>
 <form bindsubmit="formSubmit">
   <view class='enterpwd'>
     <view class='newPhone' style="flex-direction:row;">
-      <icon class='icon' type="download" size="25"></icon>
+      <icon class="iconfont icon-hp-7account-on" style="color:green;font-size:50rpx"></icon>
       <input name='newPhone' class='pwd' type='number' maxlength='11' placeholder='新手机号' placeholder-style='font-size: 17px;' bindinput='getPhone'></input>
     </view>
     <view class='code' style="flex-direction:row;">
-      <icon class='icon' type="download" size="25"></icon>
+      <icon class="iconfont icon-xingming" style="color:green;font-size:50rpx"></icon>
       <input name='code' class='pwd' type='number' maxlength='6' placeholder='短信验证码' placeholder-style='font-size: 17px;' bindinput='inputCode'></input>
       <view wx:if='{{isRightPhone == false}}' class='getCode' style='color: grey;'>{{getMsg}}</view>
       <view wx:if='{{isRightPhone == true}}' class='getCode' style='color: #00CD00;' bindtap='getCode' data-phone='{{phone}}'>{{getMsg}}</view>

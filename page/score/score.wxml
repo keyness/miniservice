@@ -5,8 +5,8 @@
 </view>
 <view class='container'>
  <view class="flex-wrp" style="flex-direction:row;">
-    <view class="scoretype"><icon class="iconfont icon-jf" style="color:red;font-size:40rpx"></icon>已用积分: </view>
+    <view class="scoretype"><icon class="iconfont icon-jf" style="color:#8B1A1A;font-size:40rpx"></icon>已用积分: </view>
     <view class="flex-item modi" bindtap="toscore">使用详情></view>
   </view>
-    <view class="scoretype"><icon class="iconfont icon-jf" style="color:red;font-size:40rpx"></icon>过期积分: </view>
+    <view class="scoretype"><icon class="iconfont icon-jf" style="color:#8B1A1A;font-size:40rpx"></icon>过期积分: </view>
 </view>
