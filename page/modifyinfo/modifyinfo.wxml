@@ -1,13 +1,13 @@
 <form bindsubmit="formSubmit">
-  <view class="title"><icon class="iconfont icon-xingming" style="color:green;font-size:40rpx"></icon> 姓名:</view>
-  <input maxlength='12' name="realname" class="inputname" placeholder='realname' placeholder-style="font-size: 18px;color: #C7C7C7;"></input>
-  <view class="title"><icon class="iconfont icon-xingbie" style="color:green;font-size:40rpx"></icon> 性别:</view>
+  <view class="title"><icon class="iconfont icon-xingming" style="color:#8B1A1A;font-size:40rpx"></icon> 姓名:</view>
+  <input maxlength='12' name="realname" class="inputname" placeholder='realname' placeholder-style="font-size: 18px;color: #C7C7C7;" value='{{realName}}'></input>
+  <view class="title"><icon class="iconfont icon-xingbie" style="color:#8B1A1A;font-size:40rpx"></icon> 性别:</view>
     <picker name='sex' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
       <view class="picker inputname">
         {{array[index]}}
       </view>
     </picker>
-  <view class="title"><icon class="iconfont icon-chushengnianyue1" style="color:green;font-size:40rpx"></icon> 出生日期:</view>
+  <view class="title"><icon class="iconfont icon-chushengnianyue1" style="color:#8B1A1A;font-size:40rpx"></icon> 出生日期:</view>
   <picker name="birthday" mode="date" value="{{date}}" start="1900-01-01" end="2017-11-24" bindchange="changeDate">
     <view class="picker inputname">
       {{date}}

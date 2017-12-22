@@ -1,6 +1,6 @@
 <!--page/score/score.wxml-->
 <view class="score">
-    <view class="num"> {{score}}</view>
+    <view class="num"> {{score}} 分</view>
     <view bindtap='goSocreDetail' class="fontstyle"><icon class="iconfont icon-jifen" style="color:white;font-size:40rpx"/>可用积分</view>
 </view>
 <view class='container'>

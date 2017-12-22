@@ -46,17 +46,45 @@ Page({
     getMsg: '获取验证码',
     second: 60,
     msgCode: 0,
-    account: 13312345678,
+    account: '',
+    phone: '0'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var account = this.data.account
-    account = formatPhone(account)
-    this.setData({
-      account: account
+    var that = this
+    wx.checkSession({
+      success: function () {
+        wx.getStorage({
+          key: 'uid',
+          success: function (res) {
+            var uid = res.data
+            that.setData({
+              uid: uid
+            })
+            wx.request({
+              url: 'http://localhost:8082/member/findMember',
+              data: {
+                uid: uid
+              },
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              success: function (res) {
+                var account = res.data.account
+                console.log('account: '+account)
+                account = formatPhone(account)
+                that.setData({
+                  account: account,
+                  currPhone: res.data.account
+                })
+              }
+            })
+          },
+        })
+      }
     })
   },
 
@@ -112,6 +140,9 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     var code = e.detail.value.code
     var msgCode = this.data.msgCode
+    var newPhone = e.detail.value.newPhone
+    var uid = this.data.uid
+    var currPhone = this.data.currPhone
     if (!(code === msgCode)) {
       wx.showModal({
         title: '错误',
@@ -119,6 +150,20 @@ Page({
         showCancel: false
       })
     } else {
+      wx.request({
+        url: 'http://localhost:8082/member/cardChange',
+        data: {
+          uid: uid,
+          newPhone: newPhone,
+          currPhone: currPhone
+        },
+        success: function(res){
+          console.log('修改成功!')
+          wx.navigateTo({
+            url: '../user/user',
+          })
+        }
+      })
       console.log('验证成功.')
     }
   },
@@ -157,44 +202,80 @@ Page({
     }
   },
   getCode: function(e){
+    var that = this
     console.log('获取验证码成功')
-    wx.showToast({
-      title: '发送验证码成功',
-      duration: 2000,
-    })
-    countdown(this)
     var that = this
     var phone = e.target.dataset.phone
+    var currPhone = this.data.currPhone
+    console.log('phone: '+phone)
+    console.log('currPhone: ' + currPhone)
 
-    var time = new Date().getTime() / 1000
-    var nonce = '123456'
-    var appSecret = '8ce1e2b42144'
-    var sign = appSecret + nonce + time
-    var checkSum = md5.SHA(sign)
+    if(phone === currPhone){
+      wx.showModal({
+        title: '错误',
+        content: '输入手机号为当前账号',
+        showCancel: false
+      })
+      return
+    }
+
+    //阿里
     wx.request({
-      url: 'https://api.netease.im/sms/sendcode.action',
+      url: 'http://localhost:8082/message/getCode',
       data: {
-        mobile: phone,
-        codeLen: 6,
+        phone: phone
       },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
-        'AppKey': '733d804e88cdd6240a1b3249708cd576',
-        'Nonce': '123456',
-        'CurTime': time,
-        'CheckSum': checkSum,
-      },
-      method: 'POST',
-      dataType: 'json',
       success: function (res) {
-        console.log(res.data)
-        that.setData({
-          msgCode: res.data.obj
-        })
-      },
-      fail: function (res) {
-        console.log(res.data)
-      },
+        countdown(that)
+        if(res.data.status === 'OK'){
+          console.log('code: '+res.data.code)
+          that.setData({
+           msgCode: res.data.code
+         })
+          wx.showToast({
+            title: '发送验证码成功',
+            duration: 2000,
+          })
+        }else if(res.data.status === 'ERROR'){
+          wx.showModal({
+            title: '错误',
+            content: '发送验证码失败',
+            showCancel: false,
+          })
+        }
+      }
     })
+
+    //网易云
+    // var time = new Date().getTime() / 1000
+    // var nonce = '123456'
+    // var appSecret = '8ce1e2b42144'
+    // var sign = appSecret + nonce + time
+    // var checkSum = md5.SHA(sign)
+    // wx.request({
+    //   url: 'https://api.netease.im/sms/sendcode.action',
+    //   data: {
+    //     mobile: phone,
+    //     codeLen: 6,
+    //   },
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+    //     'AppKey': '733d804e88cdd6240a1b3249708cd576',
+    //     'Nonce': '123456',
+    //     'CurTime': time,
+    //     'CheckSum': checkSum,
+    //   },
+    //   method: 'POST',
+    //   dataType: 'json',
+    //   success: function (res) {
+    //     console.log(res.data)
+    //     that.setData({
+    //       msgCode: res.data.obj
+    //     })
+    //   },
+    //   fail: function (res) {
+    //     console.log(res.data)
+    //   },
+    // })
   }
 })

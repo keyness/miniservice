@@ -14,7 +14,45 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.checkSession({
+      success: function () {
+        wx.getStorage({
+          key: 'uid',
+          success: function (res) {
+            var uid = res.data
+            that.setData({
+              uid: uid
+            })
+            wx.request({
+              url: 'http://localhost:8082/member/findMember',
+              data: {
+                uid: uid
+              },
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              success: function (res) {
+                that.setData({
+                  realName: res.data.realName,
+                  date: res.data.birthday
+                })
+                var sex = res.data.sex
+                if(sex === '男'){
+                  that.setData({
+                    index: 0
+                  })
+                }else{
+                  that.setData({
+                    index: 1
+                  })
+                }
+              }
+            })
+          },
+        })
+      }
+    })
   },
 
   /**
@@ -67,6 +105,25 @@ Page({
   },
   formSubmit: function(e){
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    var realname = e.detail.value.realname
+    var sex = e.detail.value.sex
+    var birthday = e.detail.value.birthday
+    var uid = this.data.uid
+    wx.request({
+      url: 'http://localhost:8082/member/updateMember',
+      data: {
+        realname: realname,
+        sex: parseInt(sex)+1,
+        birthday: birthday,
+        uid: uid
+      },
+      success: function(){
+        console.log('update success!')
+        wx.navigateTo({
+          url: '../user/user',
+        })
+      }
+    })
   },
   changeDate: function(e){
     this.setData({

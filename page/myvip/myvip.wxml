@@ -1,1 +1,12 @@
 <text>我的特权</text>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 先点这里获取手机号码</button>
+<button bindtap='checkPhone'>再点这里访问后台是否已存在当前手机号码</button>
+<button bindtap='getStorage'>getStorage</button>
+<button bindtap='card'>创建会员卡</button>
+<button bindtap='getCard'>查看会员卡</button>
+<button bindtap='setOpenCard'>设置开卡字段接口</button>
+<button bindtap='getOpenCard'>获取开卡插件参数</button>
+<button bindtap='openCard'>小程序内打开开卡插件的接口</button>
+<button bindtap='getacc'>get access_token</button>
+<button bindtap='addCard'>add Card</button>
+<button bindtap='api_ticket'>api-ticket</button>

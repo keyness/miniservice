@@ -24,17 +24,43 @@ Page({
     showCon: '../tem/eye_closed.png',
     pwdFocus: false,
     pwdConFocus: false,
-    account: 13312345678,
+    account: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var account = this.data.account
-    account = formatPhone(account)
-    this.setData({
-      account: account
+    var that = this
+    wx.checkSession({
+      success: function () {
+        wx.getStorage({
+          key: 'uid',
+          success: function (res) {
+            var uid = res.data
+            that.setData({
+              uid: uid
+            })
+            wx.request({
+              url: 'http://localhost:8082/member/findMember',
+              data: {
+                uid: uid
+              },
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              success: function (res) {
+                var account = res.data.account
+                console.log('account: ' + account)
+                account = formatPhone(account)
+                that.setData({
+                  account: account
+                })
+              }
+            })
+          },
+        })
+      }
     })
   },
 
@@ -124,6 +150,7 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     var pwd = e.detail.value.pwd
     var confirmPwd = e.detail.value.confirmPwd
+    var uid = this.data.uid
     if(pwd.length != 6 || confirmPwd.length != 6){
       wx.showModal({
         title: '错误',
@@ -137,9 +164,24 @@ Page({
           content: '两次密码输入不一致',
           showCancel: false,
         })
-      } else {
-        console.log('修改成功')
-      }
+      } 
     }
+    wx.request({
+      url: 'http://localhost:8082/member/resetPassword',
+      data: {
+        uid: uid,
+        newPassword: pwd
+      },
+      success: function(res){
+        if(res.data.status){
+          console.log("修改成功")
+          wx.navigateTo({
+            url: '../user/user',
+          })
+        }else{
+          console.log("修改失败")
+        }
+      }
+    })
   }
 })

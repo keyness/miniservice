@@ -6,6 +6,33 @@ Page({
     amount: ["500","800","1000"],
     currentType: -1,
   },
+  onLoad: function (options) {
+    var that = this
+    wx.checkSession({
+      success: function () {
+        wx.getStorage({
+          key: 'uid',
+          success: function (res) {
+            var uid = res.data
+            wx.request({
+              url: 'http://localhost:8082/member/findMember',
+              data: {
+                uid: uid
+              },
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              success: function (res) {
+                that.setData({
+                  currBal: res.data.currBal
+                })
+              }
+            })
+          },
+        })
+      }
+    })
+  },
   goBalDetail: function(){
     wx.navigateTo({
       url: '../baldetail/baldetail',

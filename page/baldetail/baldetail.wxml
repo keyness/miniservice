@@ -1,6 +1,6 @@
 <!--page/baldetail/baldetail.wxml-->
 <!--page/balance/balance.wxml-->
 <view class="score">
-  <view class="num">¥ {{balance}}</view>
+  <view class="num">¥ {{currBal}} 元</view>
   <view class="fontstyle"><icon class="iconfont icon-yue1" style="color:white;font-size:40rpx"/>当前余额</view>
 </view>

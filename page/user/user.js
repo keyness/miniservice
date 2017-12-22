@@ -12,7 +12,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.checkSession({
+      success: function(){
+        wx.getStorage({
+          key: 'uid',
+          success: function(res) {
+            var uid = res.data
+            wx.request({
+              url: 'http://172.16.89.207:8082/member/findMember',
+              data: {
+                uid: uid
+              },
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              success: function(res){
+                that.setData({
+                  account: res.data.account,
+                  realName: res.data.realName,
+                  sex: res.data.sex,
+                  birthday: res.data.birthday,
+                  level: res.data.level,
+                  currBal: res.data.currBal,
+                  score: res.data.score,
+                  activate: res.data.activate
+                })
+              }
+            })
+          },
+        })
+      }
+    })
   },
 
   /**
